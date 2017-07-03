@@ -1,0 +1,43 @@
+#!python
+
+import os
+import sys
+
+import argparse
+import fp_tools
+
+
+# Parse command line arguments
+parser = argparse.ArgumentParser(description="Repeats a data-cube [N] times.")
+
+parser.add_argument(
+    'input_cube', type=str,
+    help="Input cube.")
+parser.add_argument(
+    'output_cube', type=str,
+    help="Output cube.")
+parser.add_argument(
+    '--n_before', type=int, default=0,
+    help="Add 'n' copies of the cube in its beginning (affects header).")
+parser.add_argument(
+    '--n_after', type=int, default=0,
+    help="Add 'n' copies of the cube in its end (affects header).")
+
+args = parser.parse_args()
+
+# Check before running
+if not os.path.exists(args.input_cube):
+    print("\n Input file does not exists: %s\n Leaving now." % args.input_cube)
+    sys.exit(1)
+
+if os.path.exists(args.output_cube):
+    print("\n Output file exists: %s" % args.output_cube)
+    print(" Delete it before running this.\n Leaving now.")
+    sys.exit(1)
+
+# Running scripts
+fp_repeat = fp_tools.tools_3d.z_repeat(args.input_cube, args.output_cube,
+                           n_after=args.n_after, n_before=args.n_before)
+
+fp_repeat.start()
+fp_repeat.join()
