@@ -1,9 +1,8 @@
-# fp_tools
 
   Here are some tools that astronomers can use to deal with Fabry-Perot data.
   This is not yet a first version and new features will be added.
 
-## Requirements
+# Requirements
 
   This package uses Python 2.7 and the `astroconda` environment. If you do not
   have Anaconda installed in your computer yet, please, check the
@@ -13,7 +12,7 @@
   The `astroconda` documentation is also online and can be found in the
   [Astroconda WebPage](https://astroconda.readthedocs.io/en/latest/).
 
-## Get the source code
+# Get the source code
 
   You can download `fp_tools` using the link at the top of this page or clone
   it. The current release version is v0.2.1 and can be downloaded in the link
@@ -23,7 +22,7 @@
 
   * https://github.com/b1quint/fp_tools/archive/0.2.1.tar.gz
 
-## Install
+# Install
 
   Install the package using `pip` inside the `astroconda` VirtualEnv. To do so,
   open a terminal and do the following:
@@ -34,8 +33,8 @@
     
   The `--force-reinstall` and the `-I` flags are needed only if you 
   are updating the code. If not, you can ommit them.
-  
-## Run 
+
+# Run 
 
   After installing the `fp_repeat` and the `fp_cut` will be available
   anywhere in your system, **as long as you have the `astroconda` VirtualEnv
@@ -61,7 +60,7 @@
                        header).
       --n_after N_AFTER    Add 'n' copies of the cube in its end (affects header).
   
-## Any problem?
+# Any problem?
 
   If you have any problem downloading/installing `fp_tools` you can 
   either contact me (bquint at ctio dot noao dot edu) or create an Issue. 
