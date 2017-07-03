@@ -18,9 +18,9 @@
   it. The current release version is v0.2.1 and can be downloaded in the link
   below.
 
-  * https://github.com/b1quint/fp_tools/archive/0.2.1.zip
+  * https://github.com/b1quint/fp_tools/archive/0.2.2.zip
 
-  * https://github.com/b1quint/fp_tools/archive/0.2.1.tar.gz
+  * https://github.com/b1quint/fp_tools/archive/0.2.2.tar.gz  
 
 # Install
 
