@@ -15,12 +15,20 @@
 # Get the source code
 
   You can download `fp_tools` using the link at the top of this page or clone
-  it. The current release version is v0.2.2 and can be downloaded in the link
+  it. The current release version is v0.2.4 and can be downloaded in the link
   below.
 
-  * https://github.com/b1quint/fp_tools/archive/0.2.2.zip
+  * https://github.com/b1quint/fp_tools/archive/0.2.4.zip
 
-  * https://github.com/b1quint/fp_tools/archive/0.2.2.tar.gz  
+  * https://github.com/b1quint/fp_tools/archive/0.2.4.tar.gz  
+
+# Remove old versions
+
+  I had bad experiences upgrading the package so, if you have installed 
+  `fp_tools` in your machine before, I strongly recommend you to uninstall it 
+  to avoid cross reference between the packages and scripts.
+  
+    $ pip uninstall fp_tools
 
 # Install
 

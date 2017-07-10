@@ -2,6 +2,7 @@
 
 import os
 import sys
+import time
 
 import argparse
 import fp_tools
@@ -17,11 +18,11 @@ parser.add_argument(
     'output_cube', type=str,
     help="Output cube.")
 parser.add_argument(
-    '--n_before', type=int, default=0,
+    '--begin', '-b', type=int, default=0,
     help="Add 'n' copies of the cube in its beginning (affects header).")
 parser.add_argument(
-    '--n_after', type=int, default=0,
-    help="Add 'n' copies of the cube in its end (affects header).")
+    '--end', '-e', type=int, default=0,
+    help="Add 'n' copies of the cube in its end.")
 
 args = parser.parse_args()
 
@@ -37,7 +38,7 @@ if os.path.exists(args.output_cube):
 
 # Running scripts
 fp_repeat = fp_tools.tools_3d.z_repeat(args.input_cube, args.output_cube,
-                           n_after=args.n_after, n_before=args.n_before)
+                           n_after=args.end, n_before=args.begin)
 
 fp_repeat.start()
 fp_repeat.join()
