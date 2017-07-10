@@ -22,14 +22,12 @@ class z_repeat(threading.Thread):
         data = fits.getdata(self.input)
         hdr = fits.getheader(self.input)
 
-        # Update header
-        hdr['CRPIX3'] += (self.n_before * data.shape[0]) + 1
-
         # Repeat data
         i = 0
         temp_before = data
         while i < self.n_before:
             temp_before = np.vstack((data, temp_before))
+            hdr['CRPIX3'] += (self.n_before * data.shape[0])
             i += 1
 
         i = 0
