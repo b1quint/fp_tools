@@ -16,12 +16,12 @@
 ## Get the source code
 
   You can download `fp_tools` using the link at the top of this page or clone
-  it. The current release version is v0.2.2 and can be downloaded in the link
+  it. The current release version is v0.2.4 and can be downloaded in the link
   below.
 
-  * [FP Tools v0.2.2 (zip)](https://github.com/b1quint/fp_tools/archive/0.2.2.zip)
+  * [FP Tools v0.2.4 (zip)](https://github.com/b1quint/fp_tools/archive/0.2.4.zip)
 
-  * [FP Tools v0.2.2 (tar.gz)](https://github.com/b1quint/fp_tools/archive/0.2.2.tar.gz)  
+  * [FP Tools v0.2.4 (tar.gz)](https://github.com/b1quint/fp_tools/archive/0.2.4.tar.gz)  
 
 
 ## Install
