@@ -38,8 +38,8 @@ if os.path.exists(args.output_cube):
     sys.exit(1)
 
 # Running scripts
-fp_cut = fp_tools.tools_3d.z_cut(args.input_cube, args.output_cube,
-                                 n_begin=args.n_begin, n_end=args.n_end)
+fp_cut = fp_tools.tools_3d.ZCut(args.input_cube, args.output_cube,
+                                n_begin=args.n_begin, n_end=args.n_end)
 
 fp_cut.start()
 fp_cut.join()
