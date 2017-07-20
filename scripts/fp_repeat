@@ -37,8 +37,9 @@ if os.path.exists(args.output_cube):
     sys.exit(1)
 
 # Running scripts
-fp_repeat = fp_tools.tools_3d.z_repeat(args.input_cube, args.output_cube,
-                           n_after=args.end, n_before=args.begin)
+fp_repeat = fp_tools.tools_3d.ZRepeat(args.input_cube, args.output_cube,
+                                      n_after=args.end, n_before=args.begin)
 
 fp_repeat.start()
 fp_repeat.join()
+header['CDELT3'] /= self.oversample_factor

@@ -1,0 +1,39 @@
+#!python
+
+import os
+import sys
+import time
+
+import argparse
+import fp_tools
+
+
+# Parse command line arguments
+parser = argparse.ArgumentParser(
+    description="Oversample the data-cube in the Z direction using linear "
+                "interpolation.")
+
+parser.add_argument('input_cube', type=str, help="Input cube.")
+
+parser.add_argument('output_cube', type=str, help="Output cube.")
+
+parser.add_argument('oversample_factor', type=int, help="Oversample factor.")
+
+args = parser.parse_args()
+
+# Check before running
+if not os.path.exists(args.input_cube):
+    print("\n Input file does not exists: %s\n Leaving now." % args.input_cube)
+    sys.exit(1)
+
+if os.path.exists(args.output_cube):
+    print("\n Output file exists: %s" % args.output_cube)
+    print(" Delete it before running this.\n Leaving now.")
+    sys.exit(1)
+
+# Running scripts
+fp_repeat = fp_tools.tools_3d.ZOversample(args.input_cube, args.output_cube,
+                                          args.oversample_factor)
+
+fp_repeat.start()
+fp_repeat.join()

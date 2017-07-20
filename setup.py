@@ -41,7 +41,7 @@ setup(
 
     # package_dir={'': 'fp_tools'},
     # package_data={},
-    scripts=['scripts/fp_cut', 'scripts/fp_repeat'],
+    scripts=['scripts/fp_cut', 'scripts/fp_repeat', 'scripts/fp_oversample'],
     zip_safe=False,
 
     # Alternatively, if you want to distribute just a my_module.py, uncomment
