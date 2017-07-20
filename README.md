@@ -38,7 +38,7 @@
   
 ## Run 
 
-  After installing the `fp_repeat` and the `fp_cut` will be available
+  After installing `fp_tools` you will be able to run the scripts 
   anywhere in your system, **as long as you have the `astroconda` VirtualEnv
   activated**. To check how to use them, simply use the conventional help:
   
@@ -61,6 +61,16 @@
       --n_before N_BEFORE  Add 'n' copies of the cube in its beginning (affects
                        header).
       --n_after N_AFTER    Add 'n' copies of the cube in its end (affects header).
+      
+  The existing scripts are:
+  
+  - `fp_repeat`: repeat a data-cube n times in the spectral direction. The repeated
+  cubes are put at the beginning or at its end.
+  
+  - `fp_cut` : cut a data-cube in the spectral direction according to the channel.
+  
+  - `fp_oversample`: oversample a data-cube by multiplying the number of channels 
+  and using linear interpolation to fill the spaces between the original data.
   
 ## Any problem?
 
