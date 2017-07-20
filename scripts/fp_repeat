@@ -42,4 +42,3 @@ fp_repeat = fp_tools.tools_3d.ZRepeat(args.input_cube, args.output_cube,
 
 fp_repeat.start()
 fp_repeat.join()
-header['CDELT3'] /= self.oversample_factor
