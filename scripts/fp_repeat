@@ -11,18 +11,19 @@ import fp_tools
 # Parse command line arguments
 parser = argparse.ArgumentParser(description="Repeats a data-cube [N] times.")
 
-parser.add_argument(
-    'input_cube', type=str,
-    help="Input cube.")
-parser.add_argument(
-    'output_cube', type=str,
-    help="Output cube.")
-parser.add_argument(
-    '--begin', '-b', type=int, default=0,
-    help="Add 'n' copies of the cube in its beginning (affects header).")
-parser.add_argument(
-    '--end', '-e', type=int, default=0,
-    help="Add 'n' copies of the cube in its end.")
+parser.add_argument('input_cube', type=str,
+                    help="Input cube.")
+
+parser.add_argument('output_cube', type=str,
+                    help="Output cube.")
+
+parser.add_argument('--begin', '-b', type=int, default=0,
+                    help="Add 'n' copies of the cube in its beginning (affects "
+                         "header).")
+
+parser.add_argument('--end', '-e', type=int, default=0,
+                    help="Add 'n' copies of the cube in its end (affects "
+                         "header).")
 
 args = parser.parse_args()
 

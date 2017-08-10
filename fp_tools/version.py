@@ -5,7 +5,7 @@
 
 api = 0
 feature = 3
-bug = 0
+bug = 1
 
 __doc__ = '%d.%d.%d' % (api, feature, bug)
 

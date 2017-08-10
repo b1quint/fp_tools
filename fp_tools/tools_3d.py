@@ -183,6 +183,7 @@ class ZRepeat(threading.Thread):
         temp_before = data
         while i < self.n_before:
             temp_before = np.vstack((data, temp_before))
+            hdr['CRPIX3'] += (self.n_before * data.shape[0])
             i += 1
 
         i = 0

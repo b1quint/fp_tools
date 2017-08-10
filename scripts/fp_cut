@@ -11,19 +11,21 @@ import fp_tools
 parser = argparse.ArgumentParser(
     description="Cut a data-cube in the spectral direction.")
 
-parser.add_argument(
-    'input_cube', type=str,
-    help="Input cube.")
-parser.add_argument(
-    'output_cube', type=str,
-    help="Output cube.")
-parser.add_argument(
-    '--n_begin', type=int, default=None,
-    help="Cut channel at the beginning of the cube.")
-parser.add_argument(
-    '--n_end', type=int, default=None,
-    help="Cut channel at the end of the cube. Use negative values to count the "
-         "channels backwards (e.g. -10 excludes the last 10 channels).")
+parser.add_argument('input_cube', type=str,
+                    help="Input cube.")
+
+parser.add_argument('output_cube', type=str,
+                    help="Output cube.")
+
+parser.add_argument('--begin', '-b', type=int, default=None,
+                    help="Cut channel at the beginning of the cube where "
+                         "[BEGIN] is the index of the channel number startig "
+                         "from 0.")
+
+parser.add_argument('--end', '-e', type=int, default=None,
+                    help="Cut channel at the end of the cube. Use negative "
+                         "values to count the channels backwards (e.g. -10 "
+                         "excludes the last 10 channels).")
 
 args = parser.parse_args()
 
