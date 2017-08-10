@@ -147,6 +147,7 @@ class ZOversample(threading.Thread):
         results = np.array(results)
         results = results.reshape((x, y, new_depth))
         results = np.transpose(results, axes=[2, 1, 0])
+        results /= self.oversample_factor
 
         fits.writeto(self.output, results, header)
 
